@@ -1,0 +1,61 @@
+.banner {
+	margin-bottom: 5%;
+	& img:first-of-type {
+		display: block;
+		@include sm-down {
+			display: none;
+		}
+	}
+	& img + img {
+		display: none;
+		width: 100%;
+		@include sm-down {
+			display: block;
+		}
+	}
+}
+.square {
+	position: absolute;
+	display: none;
+	top: 120px;
+	left: 0;
+		@include md-up {
+			display: block;
+		}
+}
+.triangle {
+	position: absolute;
+	display: none;
+	right: 0;
+	top: 350px;
+	@include md-up {
+			display: block;
+		}
+}
+.circle {
+	position: absolute;
+	z-index: 5;
+	display: none;
+	top: 200px;
+	left: 0;
+	@include md-up {
+			display: block;
+		}
+}
+.img-holder + .img-holder {
+    transform: translateY(-60%); 
+}
+.home-heading.heading-md{
+	@include md-up {
+			font-size: $font-size-h2-desctop;
+		}
+}
+.book-link {
+	text-decoration: none;
+	color: $brand-color;
+	& holder-heading {
+		@include sm-up {
+				font-size: $font-size-h3;
+			}
+	}
+}

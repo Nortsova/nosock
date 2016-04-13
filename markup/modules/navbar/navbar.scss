@@ -1,0 +1,161 @@
+$navbar-toggle: navbar-toggle;
+
+.navbar{
+	.header-block{
+		// display: flex;
+		// justify-content: space-between;
+		// align-items: center;
+	}
+}
+
+.navbar-toggle{
+	display: none;
+	@include sm-down{
+		display: inline-block;
+		position: relative;
+		margin: 0;
+		width: $toggle-width;
+		height: $toggle-height;
+		padding: 0;
+		background-color: $toggle-bg;
+		border: none;
+			&-icon-bar{
+			position: absolute;
+			left: 15%;
+			right: 15%;
+			top: 18px;
+			
+
+			display: block;
+			width: auto;
+			height: 2px;
+			margin: 0;
+
+
+			background: $brand-color;
+			border-radius: 1px;
+			transform: rotate(45deg);
+			transition: all 0.3s;
+
+
+			&:nth-child(3){
+				top: 18px;
+			}
+			&:last-child{
+				transform: rotate(-45deg);
+			}
+			&:nth-child(3){
+				opacity: 0;
+			}
+		}
+	}
+	&.collapsed{
+		.#{$navbar-toggle}-icon-bar{
+			transform: rotate(0);
+			left: 25%;
+			right: 25%;
+			top: 18px;
+			&:nth-child(3){
+				opacity: 1;
+			}
+			&:last-child{
+				transform: rotate(0);
+				top: 26px;
+			}
+			&:nth-child(2){
+				top: 10px;
+			}
+		}
+	}
+}
+
+
+.navbar-brand{
+	img{
+		max-width: 125px;
+	}
+	@include sm-down{
+		display: none;
+	}
+}
+
+.social{
+	padding-top: 5px;
+	list-style-type: none;
+	&-item{
+		float: left;
+		margin-right: 30px;
+	}
+	&-link{
+		font-size: $social-link-font-size;
+		font-weight: bold;
+		color: $brand-color;
+		text-decoration: none;
+		font-family: $font-family-regular;
+		position: relative;
+		.icon-heart-o{
+			font-weight: 700;
+		}
+		&-badge{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 100%;
+			color: $brand-color;
+			font-size: $font-size-bages;
+			&:hover{
+				color: $brand-primary;
+			}
+		}
+		&:hover{
+			text-decoration: none;
+			color: $brand-primary;
+		}
+	}
+}
+
+.navbar-collapse{
+	background-color: $white;
+	z-index: 2;
+	.navbar-nav{
+		display: flex;
+		margin-top: 5px;
+		list-style-type: none;
+		li{
+			margin-left: 15px;
+			@include sm-down{
+				margin: 10px 0 0 0;
+			}
+			a{
+				font-size: $font-size-menu;
+				font-weight: bold;
+				font-family: $font-family-bold;
+				color: $brand-color;
+				text-decoration: none;
+				&:hover{
+					color: $brand-primary;
+				}
+			}
+		}
+		@include sm-down{
+			display: block;
+			margin: 25px 0 60px 0;
+		}
+	}
+	@include sm-down{
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		&.in{
+			display: block;
+		}
+	}
+	li{
+		@include sm-down{
+			text-align: center;
+		}
+	}
+	height: auto !important;
+}

@@ -1,0 +1,54 @@
+// headings
+
+.heading {
+  &-lg {
+    font-size: $font-size-h2-desctop;
+  }
+  &-md {
+    font-size: $font-size-h3;
+  }
+  &-sm {
+    font-size: $font-size-h2;
+  }
+  &-xs {
+    font-size: $font-size-h4;
+  }
+}
+
+
+//  text
+
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.text-nowrap {
+  white-space: nowrap;
+}
+.text-lowercase {
+  text-transform: lowercase;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+
+
+//  images
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

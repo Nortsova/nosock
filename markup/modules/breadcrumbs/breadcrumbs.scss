@@ -1,0 +1,36 @@
+.breadcrumbs{
+	&-item{
+		display: inline-block;
+		margin-right: 30px;
+	}
+	&-link{
+		font-size: $font-size-breadcrumbs;
+		text-decoration: none;
+	}
+	display: block;
+	margin-bottom: 60px;
+	list-style-type: none;
+	li{
+		margin-right: 30px;
+		position: relative;
+		a{
+			font-family: $font-family-regular;
+			color: $brand-color;
+			&:hover{
+				color: $brand-primary;
+			}
+			&:before{
+				position: absolute;
+				content: '';
+				top: 2px;
+				right: -18px;
+				border: 1px solid $brand-color;
+				height: 65%;
+				transform: rotate(30deg);
+			}
+		}
+	}
+	@include sm-down{
+		display: none;
+	}
+}

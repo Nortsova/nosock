@@ -1,0 +1,177 @@
+.chekout-holder{
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-align-content: space-between;
+	-ms-flex-line-pack: justify;
+	align-content: space-between;
+	padding: 0 45px;
+	align-items:flex-start;
+	@media screen and (max-width: 990px){
+		padding:0;
+	}
+	@media screen and (max-width: 580px){
+		display: none;
+	}
+}
+.flex-column {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	width: 100%;
+		h3{
+			font-size: $font-size-h3;
+			font-family: $font-family-bold;
+			color: $brand-color;
+			text-align: center;
+			margin: 0 0 100px;
+			@media screen and (max-width: 580px){
+				margin: 0 0 50px;
+			}
+		}
+	@media screen and (min-width: 992px){
+		width: 30.5%;
+	}
+}
+.form-group{
+	width: 100%;
+	margin: 0 auto;
+	@media screen and (max-width: 991px){
+		width: 100%;
+	}
+	@media screen and (max-width: 580px){
+		width: 100%;
+	}
+}
+.mobile-chekout{
+	position: relative;
+	display:none;
+	@media screen and (max-width: 580px){
+			display: block;
+			width: 100%;
+		}
+	h2{
+		font-size: $font-size-h2;
+		display: block;
+		text-align: left;
+		margin: 0;
+		color: #000;
+	}
+	.title-chekout{
+		background: #ebebeb;
+		border-bottom:1px solid #000;
+		padding:20px;
+	}
+}
+.main-nav-opener {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.btn-block{
+	display: none;
+	@include sm-down{
+		display: block;
+	}
+}
+.btn-ckt{
+	display: block;
+	@include sm-down{
+		display: none;
+	}
+}
+
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu li,
+#cssmenu a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: normal;
+  text-decoration: none;
+  position: relative;
+}
+#cssmenu .mobile-chekout h2 {
+    font-size: 18px;
+    display: block;
+    text-align: left;
+    margin: 0;
+    color: #000;
+}
+#cssmenu {
+  width: 100%;
+}
+#cssmenu > ul > li {
+	border-bottom: 1px solid #000;
+}
+#cssmenu > ul > li:last-child {
+
+}
+#cssmenu > ul > li > a {
+ 	padding:20px 0;
+  display: block;
+
+}
+#cssmenu > ul > li > a > span {
+  display: block;
+
+  padding: 0 15px;
+
+}
+#cssmenu > ul > li > a:hover {
+  text-decoration: none;
+}
+#cssmenu > ul > li.active {
+	margin: 0 0 -2px;
+}
+#cssmenu > ul > li.active > a {
+  border-bottom: 1px solid #000;
+	padding:20px 0;
+}
+#cssmenu > ul > li.active > a span {
+
+}
+#cssmenu > ul > li.has-sub > a span {
+   background:url(../../assets/images/content/btn-arrow-b.png) no-repeat 90% 50%;
+}
+#cssmenu > ul > li.has-sub.active > a span {
+   background: url(../../assets/images/content/btn-arrow-t.png) no-repeat 90% 50%;
+}
+/* Sub menu */
+#cssmenu ul ul {
+  background: #fff;
+  display: none;
+}
+
+#cssmenu ul ul a {
+  display: block;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+#cssmenu ul ul a:hover {
+
+}
+

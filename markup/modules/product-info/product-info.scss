@@ -1,0 +1,17 @@
+.product-info {
+	text-align: center;
+	padding: 40px 0;
+	&__title {
+		font-size: 16px;
+		font-family: $font-family-bold;
+	}
+	&__description {
+		display: none;
+		@include sm-up {
+			display: block;
+		}
+	}
+	@include sm-up {
+		text-align: left;
+	}
+}

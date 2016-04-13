@@ -1,0 +1,31 @@
+  $logo: -4px -4px 648px 224px 656px 3416px './test.svg' 'logo';
+  $bag: -4px -232px 400px 483px 656px 3416px './test.svg' 'bag';
+  $cube: -4px -719px 400px 411px 656px 3416px './test.svg' 'cube';
+  $search: -4px -1134px 400px 400px 656px 3416px './test.svg' 'search';
+  $cross: -4px -1538px 400px 383px 656px 3416px './test.svg' 'cross';
+  $heart2: -4px -1925px 400px 334px 656px 3416px './test.svg' 'heart2';
+  $circle: -4px -2263px 340px 284px 656px 3416px './test.svg' 'circle';
+  $right11: -4px -2551px 269px 269px 656px 3416px './test.svg' 'right11';
+  $square: -4px -2824px 178px 183px 656px 3416px './test.svg' 'square';
+  $triangle: -4px -3011px 140px 131px 656px 3416px './test.svg' 'triangle';
+  $icon-basket: -4px -3146px 47px 59px 656px 3416px './test.svg' 'icon-basket';
+  $icon-basket1: -4px -3209px 47px 59px 656px 3416px './test.svg' 'icon-basket1';
+  $icon-wish: -4px -3272px 55px 46px 656px 3416px './test.svg' 'icon-wish';
+  $icon-search: -4px -3322px 53px 54px 656px 3416px './test.svg' 'icon-search';
+  $cross92: -4px -3380px 32px 32px 656px 3416px './test.svg' 'cross92';
+
+
+
+@mixin svg-sprite-position($svg-sprite) {
+  $svg-sprite-offset-x: nth($svg-sprite, 1);
+  $svg-sprite-offset-y: nth($svg-sprite, 2);
+  background-position: $svg-sprite-offset-x  $svg-sprite-offset-y;
+}
+
+@mixin bg-svg($svg-sprite, $repeat: no-repeat) {
+    background-image: url('%=static=%svg-sprite/sprite.svg');
+    @include svg-sprite-position($svg-sprite);
+    width: nth($svg-sprite, 3);
+    height: nth($svg-sprite, 4);
+    background-repeat: $repeat;
+}

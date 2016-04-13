@@ -1,0 +1,98 @@
+
+
+$font-size-base:          14px;
+$line-height-base:        1.428571429; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   12px;
+//** Global textual link color.
+$brand-color:           #000;
+$link-color:            $brand-color;
+$body-bg:               #fff;
+$gray-base:              #000;
+$gray-light:             lighten($gray-base, 46.7%); // #777
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed;
+//== Pagination
+//
+//##
+$pagination-color:                     $link-color;
+$pagination-bg:                        #fff;
+
+$pagination-hover-bg:                  $body-bg;
+
+$pagination-active-color:              $link-color;
+$pagination-active-bg:                 $body-bg;
+
+$pagination-disabled-color:            $gray-light;
+$pagination-disabled-bg:               #fff;
+
+
+
+//
+// Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: $line-height-computed 0;
+  float: right;
+  padding: 0 20px;
+  > li {
+    display: inline; // Remove list-style and block-leves
+    > a,
+    > span {
+      position: relative;
+      float: left; // Collapse white-space
+      padding: $padding-base-vertical $padding-base-horizontal;
+      line-height: $line-height-base;
+      text-decoration: none;
+      color: $pagination-color;
+      background-color: $pagination-bg;
+      margin-left: -1px;
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      z-index: 2;
+      background-color: $pagination-hover-bg;
+      text-decoration: underline;
+    }
+  }
+
+  > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      text-decoration: underline;
+      color: $pagination-active-color;
+      background-color: $pagination-active-bg;
+      cursor: default;
+    }
+  }
+
+  > .disabled {
+    > span,
+    > span:hover,
+    > span:focus,
+    > a,
+    > a:hover,
+    > a:focus {
+      color: $pagination-disabled-color;
+      background-color: $pagination-disabled-bg;
+      cursor: $cursor-disabled;
+    }
+  }
+}
+

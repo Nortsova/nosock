@@ -1,0 +1,302 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+    <link rel="stylesheet" href="../assets/scss/fonts.scss">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>default title</title>
+        <meta content="" name="description">
+        <meta content="" name="keywords">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta content="telephone=no" name="format-detection">
+        <!-- This make sence for mobile browsers. It means, that content has been optimized for mobile browsers -->
+        <meta name="HandheldFriendly" content="true">
+
+
+        <!--[if (gt IE 9)|!(IE)]><!-->
+        <link href="assets/css/main.min.css" rel="stylesheet" type="text/css">
+        <!--<![endif]-->
+
+        <meta property="og:title" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="500" />
+        <meta property="og:image:height" content="300" />
+        <meta property="twitter:description" content="" />
+        <link rel="image_src" href="" />
+
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <script>
+            (function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
+        </script>
+
+    </head>
+
+    <body class="page">
+
+
+        <header>
+            <header class="header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="container-fluid">
+                                <nav class="navbar navbar-default">
+                                    <div class="header-block flex flex-space-between flex-middle">
+                                        <div class="navbar-header">
+                                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                                <span class="sr-only"></span>
+                                                <span class="navbar-toggle-icon-bar"></span>
+                                                <span class="navbar-toggle-icon-bar"></span>
+                                                <span class="navbar-toggle-icon-bar"></span>
+                                            </button>
+                                            <a class="navbar-brand" href="home-page.html">
+                                                <img src="assets/images/content/logo.png" alt="">
+                                            </a>
+                                        </div>
+                                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                            <ul class="nav navbar-nav">
+                                                <li class="active"><a href="#">About</a>
+                                                </li>
+                                                <li><a href="product.html">Store</a>
+                                                </li>
+                                                <li><a href="#">Lookbook</a>
+                                                </li>
+                                                <li><a href="#">Contact</a>
+                                                </li>
+                                                <li><a href="#">Login</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <ul class="social navbar-right">
+                                            <li class="social-item">
+                                                <a class="social-link" href="#"><span class="icon-search2"></span></a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a class="social-link" href="wish-list.html"><span class="icon-heart-o"></span></a>
+                                            </li>
+                                            <li class="social-item">
+                                                <a class="social-link" href="cart.html"><span class="icon-bag"></span><span class="bages social-link-badge">1</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </header>
+        <section class="page__wrapper">
+
+            <div class="container">
+                <form>
+                    <div class="chekout-holder">
+                        <div class="flex-column">
+                            <h3>Personal Detail</h3>
+                            <div class="form-group">
+                                <input class="form_control" type="name" id="InputName" placeholder="name">
+                                <input class="form_control" type="email" id="Email" placeholder="e-mail">
+                                <input class="form_control" type="phone" id="PhoneNumber" placeholder="phone number">
+                            </div>
+                        </div>
+                        <div class="flex-column">
+                            <h3>Billing Address</h3>
+                            <div class="form-group">
+                                <input class="form_control" type="line" id="Line" placeholder="line">
+                                <input class="form_control" type="town" id="town" placeholder="town">
+                                <input class="form_control" type="country" id="country" placeholder="country">
+                                <div class="input-holder all-width">
+                                    <input class="form_control width2" type="code" id="" placeholder="code">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="flex-column">
+                            <h3>Payment Details</h3>
+                            <div class="form-group">
+                                <input class="form_control" type="name" id="InputName" placeholder="name">
+                                <input class="form_control" type="card" id="card" placeholder="card №">
+                                <div class="input-holder">
+                                    <label class="code pull-left">code</label>
+                                    <input class="form_control width1 pull-right" type="code" id="" placeholder="">
+                                </div>
+                                <div class="input-holder all-width">
+                                    <label class="data pull-left">exp data</label>
+                                    <div class="pull-right">
+                                        <input class="form_control width1 pull-left" type="data" id="" placeholder="">
+                                        <span>/</span>
+                                        <input class="form_control width1 pull-right" type="data" id="" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id='cssmenu' class="mobile-chekout">
+                        <ul>
+                            <li class='has-sub title-chekout'><a href='#'><span><h2>Personal Detail</h2></span></a>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <div class="form-group">
+                                                <input class="form_control" type="name" id="InputName" placeholder="name">
+                                                <input class="form_control" type="email" id="Email" placeholder="e-mail">
+                                                <input class="form_control" type="phone" id="PhoneNumber" placeholder="phone number">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='has-sub title-chekout'><a href='#'><span><h2>Billling Address</h2></span></a>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <div class="form-group">
+                                                <input class="form_control" type="line" id="Line" placeholder="line">
+                                                <input class="form_control" type="town" id="town" placeholder="town">
+                                                <input class="form_control" type="country" id="country" placeholder="country">
+                                                <div class="input-holder all-width billing">
+                                                    <input class="form_control width2" type="code" id="" placeholder="code">
+                                                </div>
+                                            </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class='has-sub title-chekout'><a href='#'><span><h2>Payment Detail</h2></span></a>
+                                <ul>
+                                    <li>
+                                        <div>
+                                            <div class="form-group">
+                                                <input class="form_control" type="name" id="InputName" placeholder="name">
+                                                <input class="form_control" type="card" id="card" placeholder="card №">
+                                                <div class="input-holder">
+                                                    <label class="code pull-left">code</label>
+                                                    <input class="form_control width1 fl-n pull-right" type="code" id="" placeholder="">
+                                                </div>
+                                                <div class="input-holder all-width">
+                                                    <label class="data pull-left">exp data</label>
+                                                    <div class="pull-right width-two">
+                                                        <input class="form_control width1 pull-left" type="data" id="" placeholder="">
+                                                        <span>/</span>
+                                                        <input class="form_control width1 pull-right mob-fl-n" type="data" id="" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        </div>
+                        <button class="btn btn--to-checkout btn-block">order review</button>
+                        <button class="btn btn--order-review pull-right btn-ckt">order review</button>
+                </form>
+                </div>
+                <div class="page__buffer"></div>
+
+        </section>
+
+        <footer class="page__footer">
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="wrapper">
+
+                        <div class="footer-items row flex flex-space-between">
+                            <div class="footer-menu col-md-4 col-sm-10">
+                                <ul>
+                                    <li><a href="#">About</a>
+                                    </li>
+                                    <li><a href="#">Store</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Contact</a>
+                                    </li>
+                                    <li><a href="#">FAQ's</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Shipping info</a>
+                                    </li>
+                                    <li><a href="#">Privacy &amp; Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-mail col-md-4 col-sm-10">
+                                <a href="#">Newsletters</a>
+                                <div class="footer-mail-box">
+                                    <input type="text" id="subscribe" placeholder="E-mail" size="50">
+                                    <input type="submit" value="">
+                                    <span class="go"></span>
+                                </div>
+                            </div>
+                            <div class="footer-social col-md-4 col-sm-10">
+                                <ul>
+                                    <li>
+                                        <a href="#" aria-hidden="true" class="icon-facebook-f"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon-google"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon-twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon-instagram"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="icon-pinterest"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <span class="line"></span>
+                        <div class="copyrights">
+                            <p>Copyright 2015 Nosockstore. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="assets/js/main.min.js"></script>
+        <!--        <script>
+        ( function( $ ) {
+$( document ).ready(function() {
+$('#cssmenu > ul > li > a').click(function() {
+  $('#cssmenu li').removeClass('active');
+  $(this).closest('li').addClass('active'); 
+  var checkElement = $(this).next();
+  if((checkElement.is('ul')) && (checkElement.is(':visible'))) {
+    $(this).closest('li').removeClass('active');
+    checkElement.slideUp('normal');
+  }
+  if((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
+    $('#cssmenu ul ul:visible').slideUp('normal');
+    checkElement.slideDown('normal');
+  }
+  if($(this).closest('li').find('ul').children().length == 0) {
+    return true;
+  } else {
+    return false;   
+  }     
+});
+});
+} )( jQuery );
+
+        </script> -->
+    </body>
+
+</html>

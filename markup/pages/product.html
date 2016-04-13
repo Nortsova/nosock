@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+<link rel="stylesheet" href="../assets/scss/fonts.scss">
+
+    <head>
+        {{> head/head head.defaults}}
+    </head>
+
+    <body class="page">
+        %=symbols=%
+        <header>
+            {{> header/header}}
+        </header>
+        <section class="page__wrapper">
+
+            {{> product-grid/product-grid}}
+
+
+            <div class="page__buffer"></div>
+
+        </section>
+
+        <footer class="page__footer">
+            {{> footer/footer}}
+        </footer>
+
+        <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+        <script>svg4everybody();</script>
+
+        <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+       
+    </body>
+
+</html>

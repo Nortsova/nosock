@@ -1,0 +1,112 @@
+// button's variables
+// --------------------------------------------------
+$btn-font-weight-norm: 400  !default;
+$btn-font-size: 20px  !default;
+$btn-bg-base: $brand-color  !default;
+$btn-color: $white  !default;
+
+
+
+// button's mixins
+// --------------------------------------------------
+@mixin button-size($padding-vert-t, $padding-horiz-r, $padding-vert-b, $padding-horiz-l, $font-size:$btn-font-size, $border-radius:0px, $line-height:60%) {
+  padding: $padding-vert-t $padding-horiz-r $padding-vert-b $padding-horiz-l;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  line-height: $line-height;     //   межстрочный интервал
+}
+
+@mixin button-style($color:$btn-color, $bg-color:$btn-bg-base, $border-color:transparent) {
+  color: $color;
+  background-color: $bg-color;
+  border-color: $border-color;
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: lighten($bg-color, 25%);
+    border-color: lighten($border-color, 25%);
+  }
+  &:hover {
+    color: $color;
+    background-color: lighten($bg-color, 15%);
+    border-color: lighten($border-color, 15%);
+  }
+}
+
+
+
+
+// ----------- FOR NEW BUTTONS -----------
+// button-size($padding-vert-t, $padding-horiz-r, $padding-vert-b, $padding-horiz-l, 
+//         $font-size:$btn-font-size,         $border-radius:0px,       $line-height:60%)
+// button-style($color,       $bg-color,          $border-color:transparent)
+@mixin button-variants() {
+  &--add-to-cart{
+    &-l{ 
+        @include button-size(20px, 45px, 28px, 42px, 26px, 0);
+        @include button-style(white, black);
+        font-family: $font-family-bold;
+        letter-spacing: 3px;
+    }
+    &-s{
+        @include button-size(20px, 30px, 28px, 30px, 26px, 0);
+        @include button-style(white, black);
+        font-family: $font-family-bold;
+        letter-spacing: 3px;
+    }
+  }
+  &--heart{
+    @include button-size(39px, 48px, 21px, 48px, 31px, 0);
+    @include button-style(white, black);
+    position: relative;
+    span {
+      position: absolute;
+      top: 16px;
+      left: 33px;
+    }
+  }
+  &--to-checkout{
+    font-family: $font-family-bold;
+    @include button-size(22px, 24px, 23px, 27px, 25px, 0);
+    @include button-style(white, black);
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  }
+  &--order-review{
+    font-family: $font-family-bold;
+    @include button-size(22px, 22px, 23px, 32px, 25px, 0);
+    @include button-style(white, black);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+  }
+}
+
+// button's styles
+// --------------------------------------------------
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  font-weight: $btn-font-weight-norm;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; 
+  border: 1px solid transparent;
+  white-space: nowrap;
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    outline: none;
+  }
+  @include button-variants;
+
+  &-block {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+
